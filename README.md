@@ -8,3 +8,12 @@
 
 This tool may cause extra traffic to weblio.jp (like DDoS).
 Don't search words automatically.
+
+## Installation
+
+```shell
+go get github.com/kaya-kzt/dicto
+cd dicto
+glide install
+go build
+```
