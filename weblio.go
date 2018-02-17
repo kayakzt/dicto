@@ -6,6 +6,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
@@ -20,12 +21,16 @@ func getWeblioDict(word string) {
 
 	// get page from weblio.jp
 	url := "http://www.weblio.jp/content/" + word
-	doc, _ := goquery.NewDocument(url)
+	doc, err := goquery.NewDocument(url)
+
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	// trim elemets
 	doc.Find(".NetDicHead .midashigo > span").Empty()
 
-	// print Midashigo
+	// print midashigo
 	str = doc.Find(".NetDicHead .midashigo").Text()
 	if str != "" {
 		fmt.Println(yellow(str))
