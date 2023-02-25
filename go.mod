@@ -1,6 +1,6 @@
 module github.com/kaya-kzt/dicto
 
-go 1.12
+go 1.19
 
 require (
 	github.com/PuerkitoBio/goquery v1.4.1
