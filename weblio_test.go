@@ -120,7 +120,7 @@ const weblioEijiHTML = `
 <html><body>
   <div id="h1Query">Query</div>
   <div class="summaryM">
-    <table><tbody><tr><td class="content-explanation"> Summary </td></tr></tbody></table>
+    <p><span class="content-explanation"> Summary </span></p>
   </div>
   <div class="qotC">
     <div class="qotCE"><span>rm</span> Example head 1 </div>
