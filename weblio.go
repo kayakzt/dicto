@@ -94,7 +94,7 @@ func renderWeblioEijiDict(
 	fmt.Fprintln(out, green(query))
 
 	// print summary
-	summary := strings.TrimSpace(doc.Find(".summaryM table tbody tr td.content-explanation").Text())
+	summary := strings.TrimSpace(doc.Find(".summaryM p .content-explanation").Text())
 	fmt.Fprintln(out, summary)
 
 	// print example documents
